@@ -98,3 +98,33 @@ document.getElementById("btnDem").onclick = function () {
     }
     document.getElementById("ketQuaB3").innerHTML = "Có " + counter_chan + " số chẵn và " + counter_le + " số lẻ";
 }
+//Bài tập 4: Đoán hình tam giác
+
+document.getElementById("btnDuDoan").onclick = function () {
+    //input: number: canh1, canh2, canh3
+    var a = Number(document.getElementById("canh1").value);
+    var b = Number(document.getElementById("canh2").value);
+    var c = Number(document.getElementById("canh3").value);
+    //output: string: tamGiacDeu, tamGiacCan, tamGiacVuong, tamGiacKhac
+    var ketQuaB4 = "";
+    //progress
+    if (a <= 0 || b <= 0 || c <= 0) {
+        ketQuaB4 = "này không phải tam giác";
+    }
+    else if (a == b && b == c) {
+        ketQuaB4 = "Tam Giác Đều";
+    }
+    else if (a == b || a == c || b == c) {
+        ketQuaB4 = "Tam Giác Cân";
+    }
+    else if ((Math.pow(c, 2) == Math.pow(a, 2) + Math.pow(b, 2))
+        || (Math.pow(b, 2) == Math.pow(a, 2) + Math.pow(c, 2))
+        || (Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2))
+    ) {
+        ketQuaB4 = "Tam Giác Vuông";
+    }
+    else {
+        ketQuaB4 = "Tam Giác Khác"
+    }
+    document.getElementById("ketQuaB4").innerHTML = "Hình " + ketQuaB4;
+}
