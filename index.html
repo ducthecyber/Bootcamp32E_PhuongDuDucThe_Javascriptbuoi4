@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="container" style="width:70%">
+    <div class="container mb-5" style="width:70%">
         <h3>Bài tập 1: Sắp xếp 3 số nguyên theo thứ tự tăng dần</h3>
         <div class="form-group row">
             <div class="col-4">
@@ -66,20 +66,100 @@
         </div>
         <button id="btnDuDoan" class="mt-2 btn btn-primary">Dự Đoán</button>
         <div class="mt-2 alert alert-success" id="ketQuaB4"></div>
-    </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="./main.js"></script>
+        <h3 class="mt-4 text-warning">Bài tập 5: Tính ngày tháng năm</h3>
+        <div class="form-group row">
+            <div class="col-4">
+                <input type="date" class="form-control" id="date" placeholder="Nhập ngày" />
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-success mt-2" id="btnYesterday">Ngày hôm qua</button>
+            <button class="btn btn-primary mt-2" id="btnTomorrow">Ngày kế tiếp</button>
+        </div>
+        <div class="mt-2 alert alert-info" id="ketQuaB5"></div>
+        <h3 class="mt-2 text-warning">Bài tập 6: Tìm ngày của một tháng</h3>
+        <div class="form-group row">
+            <div class="col-4">
+                <input type="number" class="form-control" id="month_B6" placeholder="Nhập tháng" />
+            </div>
+            <div class="col-4">
+                <input type="number" class="form-control" id="year_B6" placeholder="Nhập năm" />
+            </div>
+            <div class="col-4">
+                <button class="btn btn-primary" id="btnTinhNgay">Tính số ngày</button>
+            </div>
+        </div>
+        <div class="alert alert-success mt-2" id="ketQuaB6"></div>
+        <h3 class="mt-2 text-warning">Bài tập 7: In ra cách đọc số</h3>
+        <div class="form-group row">
+            <div class="col-6">
+                <input type="number" class="form-control" placeholder="Nhập số có 3 chữ số" id="soB7" />
+            </div>
+            <div class="col-6">
+                <button class="btn btn-success" id="btnDocSo">Đọc số</button>
+            </div>
+        </div>
+        <div class="alert alert-danger mt-2" id="ketQuaB7"></div>
+        <h3 class="mt-2 text-warning">Bài tập 8: In ra tên sinh viên xa trường nhất</h3>
+        <p class="font-weight-bold">Sinh viên thứ nhất</p>
+        <div class="form-group row">
+            <div class="col-4">
+                <input type="text" class="form-control" placeholder="Nhập tên" id="nameA" />
+            </div>
+            <div class="col-4">
+                <input type="number" class="form-control" placeholder="Nhập tọa độ x" id="cxA" />
+            </div>
+            <div class="col-4">
+                <input type="number" class="form-control" placeholder="Nhập tọa độ y" id="cyA" />
+            </div>
+        </div>
+        <p class="font-weight-bold">Sinh viên thứ hai</p>
+        <div class="form-group row">
+            <div class="col-4">
+                <input type="text" class="form-control" placeholder="Nhập tên" id="nameB" />
+            </div>
+            <div class="col-4">
+                <input type="number" class="form-control" placeholder="Nhập tọa độ x" id="cxB" />
+            </div>
+            <div class="col-4">
+                <input type="number" class="form-control" placeholder="Nhập tọa độ y" id="cyB" />
+            </div>
+        </div>
+        <p class="font-weight-bold">Sinh viên thứ ba</p>
+        <div class="form-group row">
+            <div class="col-4">
+                <input type="text" class="form-control" placeholder="Nhập tên" id="nameC" />
+            </div>
+            <div class="col-4">
+                <input type="number" class="form-control" placeholder="Nhập tọa độ x" id="cxC" />
+            </div>
+            <div class="col-4">
+                <input type="number" class="form-control" placeholder="Nhập tọa độ y" id="cyC" />
+            </div>
+        </div>
+        <p class="font-weight-bold">Trường Học</p>
+        <div class="form-group row">
+            <div class="col-4">
+                <input type="number" class="form-control" placeholder="Nhập tọa độ x" id="cxSchool" />
+            </div>
+            <div class="col-4">
+                <input type="number" class="form-control" placeholder="Nhập tọa độ y" id="cySchool" />
+            </div>
+        </div>
+        <button class="btn btn-primary mt-2" id="btnSoSanh">Ai xa trường nhất</button>
+        <div class="alert alert-danger mt-2" id="ketQuaBai8"></div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="./main.js"></script>
 </body>
 
 </html>
